@@ -1,9 +1,12 @@
 import PriceDisplay from "../PriceDisplay/PriceDisplay";
+import clsx from "clsx";
+import style from './ProductList.module.scss';
 
 const ProductListItem = ({ name, price, promo }) => {
 
     return (
-        <div>
+        // <div className={style.card + ' ' + (promo ? style.promo : '')}>
+        <div className={clsx(style.card, promo && style.promo)}>
             <h3>{name}</h3>
             <p><PriceDisplay price={price} /> {promo && 'PROMO'}</p>
         </div>
@@ -26,7 +29,7 @@ const ProductList = ({ products }) => {
     );
 
     return (
-        <div>
+        <div className={style.cards}>
             {productsJSX}
         </div>
     );
