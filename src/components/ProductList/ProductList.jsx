@@ -13,7 +13,7 @@ const ProductListItem = ({ name, price, promo }) => {
     );
 };
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products = [] }) => {
 
     if(products.length === 0) {
         return (
@@ -33,10 +33,6 @@ const ProductList = ({ products }) => {
             {productsJSX}
         </div>
     );
-};
-
-ProductList.defaultProps = {
-    products: []
 };
 
 export default ProductList;
