@@ -1,9 +1,11 @@
+import PriceDisplay from "../PriceDisplay/PriceDisplay";
+
 const ProductListItem = ({ name, price, promo }) => {
 
     return (
         <div>
             <h3>{name}</h3>
-            <p>{price}</p>
+            <p><PriceDisplay price={price} /></p>
         </div>
     );
 };
