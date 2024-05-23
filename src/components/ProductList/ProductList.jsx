@@ -5,7 +5,7 @@ const ProductListItem = ({ name, price, promo }) => {
     return (
         <div>
             <h3>{name}</h3>
-            <p><PriceDisplay price={price} /></p>
+            <p><PriceDisplay price={price} /> {promo && 'PROMO'}</p>
         </div>
     );
 };
